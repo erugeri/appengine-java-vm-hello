@@ -41,5 +41,16 @@
      I'm running on <%= HelloInfo.getInfo() %>.
   </p>
 
+  <%-- Will throw an IllegalStateException on runtime --%>
+  <%--
+  java.lang.IllegalStateException
+        at org.apache.jasper.runtime.ServletResponseWrapperInclude.getOutputStream(ServletResponseWrapperInclude.java:65)
+        at javax.servlet.ServletResponseWrapper.getOutputStream(ServletResponseWrapper.java:94)
+        at com.google.apphosting.vmruntime.CommitDelayingResponse.<init>(CommitDelayingResponse.java:62)
+        at com.google.apphosting.vmruntime.CommitDelayingResponseServlet3.<init>(CommitDelayingResponseServlet3.java:23)
+        at com.google.apphosting.vmruntime.jetty9.VmRuntimeWebAppContext.doScope(VmRuntimeWebAppContext.java:394)
+   --%>
+  <jsp:include page="includedPage.jsp" />  
+  
 </body>
 </html>
