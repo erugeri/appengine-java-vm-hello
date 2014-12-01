@@ -32,6 +32,10 @@ public class HelloInfo {
     String hostname = "" +
         env.getAttributes().get("com.google.appengine.runtime.default_version_hostname");
   	String infostring = "version: " + majorVersion + " and hostname: " + hostname;
+  	
+  	if (true)
+  	  throw new NullPointerException();
+  	
   	return infostring;
   }
 }

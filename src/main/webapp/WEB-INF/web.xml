@@ -29,6 +29,11 @@
     </auth-constraint>
   </security-constraint>
   
+  <error-page>
+    <error-code>500</error-code>
+    <location>error500.jsp</location>
+  </error-page>
+  
   <welcome-file-list>
     <welcome-file>hello.jsp</welcome-file>
   </welcome-file-list>
